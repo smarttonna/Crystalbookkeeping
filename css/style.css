@@ -322,24 +322,6 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; }
 .max-w-700 { max-width: 700px; }
 .max-w-900 { max-width: 900px; }
 
-/* Footer Contact Strip (moved from top-bar) */
-.footer-contact-strip {
-  font-size: 0.83rem;
-  overflow-wrap: break-word;
-  word-break: break-word;
-}
-.footer-contact-strip a {
-  color: #CBD5E1;
-  text-decoration: none;
-  transition: color 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  max-width: 100%;
-  overflow-wrap: break-word;
-  word-break: break-all;
-}
-.footer-contact-strip a:hover { color: var(--brand-lime-bright); }
 .top-bar-badge {
   color: var(--brand-lime-bright);
   font-weight: 600;
