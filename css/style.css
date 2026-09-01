@@ -438,7 +438,7 @@ body.preloader-active {
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden !important;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
 }
@@ -447,7 +447,7 @@ body {
   font-family: var(--font-main);
   background-color: var(--bg-cream);
   color: var(--text-dark);
-  overflow-x: hidden !important;
+  overflow-x: clip;
   max-width: 100%;
   width: 100%;
   line-height: 1.6;
@@ -461,16 +461,16 @@ img, svg, video {
   height: auto;
 }
 
-.container, .container-fluid {
-  max-width: 100%;
+/* Typography Overrides */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-main);
+  font-weight: 700;
+  color: var(--text-dark);
+  letter-spacing: -0.02em;
 }
 
-h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; }
-
-/* Custom Utility Classes */
 .text-lime { color: var(--brand-lime-bright) !important; }
 .text-slate { color: var(--text-slate) !important; }
-.text-dark-forest { color: var(--bg-dark-forest) !important; }
 .bg-dark-forest { background-color: var(--bg-dark-forest) !important; }
 .bg-cream { background-color: var(--bg-cream) !important; }
 .max-w-700 { max-width: 700px; }
@@ -491,14 +491,27 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; }
 }
 
 
-/* Main Navbar */
+/* Main Navbar — Sticky & Scroll Responsive */
 .main-navbar {
   background-color: var(--bg-dark-forest) !important;
   padding: 12px 0;
-  transition: box-shadow 0.3s ease;
-  z-index: 1030;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 1030 !important;
+  position: -webkit-sticky !important;
+  position: sticky !important;
+  top: 0 !important;
 }
-.main-navbar.sticky-top { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+.main-navbar.sticky-top {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+.main-navbar.navbar-scrolled {
+  padding: 8px 0;
+  background-color: rgba(11, 48, 38, 0.96) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  border-bottom: 1px solid rgba(158, 240, 26, 0.25);
+}
 .navbar-brand {
   font-weight: 800;
   font-size: 1.3rem;

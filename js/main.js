@@ -4,6 +4,9 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Initialize Sticky Navbar scroll detection
+  initNavbarScroll();
+
   // Initialize Pricing Calculator
   initPricingCalculator();
 
@@ -13,6 +16,25 @@ document.addEventListener('DOMContentLoaded', () => {
   // Smooth Scrolling
   initSmoothScroll();
 });
+
+/* ==========================================================================
+   Navbar Scroll Effect
+   ========================================================================== */
+function initNavbarScroll() {
+  const navbar = document.querySelector('.main-navbar');
+  if (!navbar) return;
+
+  const handleScroll = () => {
+    if (window.scrollY > 20) {
+      navbar.classList.add('navbar-scrolled');
+    } else {
+      navbar.classList.remove('navbar-scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
 
 /* ==========================================================================
    Pricing Calculator Logic
