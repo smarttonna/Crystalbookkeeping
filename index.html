@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crystal Bookkeeping | Making Your Books Crystal Clear</title>
+  <meta name="description" content="Certified bookkeeping services for service-based businesses globally. Intuit, QuickBooks, Xero, and Zoho Books expert providing setup, cleanup, catchup, and monthly bookkeeping.">
+  
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Theme Stylesheet (Biztop Aesthetic) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="preloader-active">
+  <!-- ========== PRELOADER ========== -->
+  <div id="crystalPreloader">
+    <!-- Book animation -->
+    <div class="preloader-book">
+      <div class="preloader-book__left"></div>
+      <div class="preloader-book__spine"></div>
+      <div class="preloader-book__right"></div>
+    </div>
+
+    <!-- Logo + brand name -->
+    <div class="preloader-logo">
+      <img src="assets/images/logo-icon.png" alt="Crystal Bookkeeping">
+      <div class="preloader-logo__name">Crystal<span>Bookkeeping</span></div>
+    </div>
+
+    <!-- Pulsing dots -->
+    <div class="preloader-dots">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <!-- ========== END PRELOADER ========== -->
+
+
+  <!-- Top Announcement Header -->
+
+  <!-- Sticky Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark main-navbar sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="assets/images/logo-icon.png" alt="Crystal Bookkeeping Logo" style="height:38px; width:auto;">
+        <span>Crystal<span style="color: var(--brand-lime-bright);">Bookkeeping</span></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarMain">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services & Packages</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#process">Cleanup Process</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#estimator">Pricing Estimator</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+        <a href="#bookingModal" class="btn btn-lime" data-bs-toggle="modal" data-bs-target="#bookingModal">
+          Book Appointment <i class="bi bi-arrow-right-circle-fill"></i>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0">
+          <div class="badge-pill-lime mb-3">
+            <i class="bi bi-star-fill"></i> 5.0 Intuit Certified Bookkeeper
+          </div>
+          <h1 class="hero-headline">
+            NEXT-GEN TOP-NOTCH <span>FINANCIAL CLARITY</span>
+          </h1>
+          <p class="hero-subtext">
+            Making your books crystal clear. We help service-based business owners locally and globally turn messy financial records into accurate, audit-ready systems you can actually understand, trust, and use to grow.
+          </p>
+          <div class="d-flex flex-wrap align-items-center gap-4">
+            <a href="#bookingModal" class="btn btn-lime" data-bs-toggle="modal" data-bs-target="#bookingModal">
+              Book Appointment <i class="bi bi-arrow-right-short fs-5"></i>
+            </a>
+            <a href="tel:+2349033744251" class="btn-phone">
+              <div class="phone-icon-box"><i class="bi bi-telephone-fill"></i></div>
+              <div>
+                <span class="d-block text-uppercase" style="font-size: 0.75rem; color: #CBD5E1; letter-spacing: 0.05em;">CALL US TODAY</span>
+                <span>+234 903 374 4251</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-image-wrapper">
+            <img src="assets/images/wuraola_hero.jpg" alt="Wuraola Oluwalana - Founder, Crystal Bookkeeping" style="object-position: center top;">
+            
+            <!-- Floating Stat Overlay 1 -->
+            <div class="floating-stat-card top-left d-none d-sm-flex align-items-center gap-3">
+              <div class="brand-icon" style="width:40px; height:40px;"><i class="bi bi-check-circle-fill fs-5"></i></div>
+              <div>
+                <strong class="d-block text-lime fs-5">100% Audit Ready</strong>
+                <span class="small text-light">Zero Discrepancy Reconciliation</span>
+              </div>
+            </div>
+
+            <!-- Floating Stat Overlay 2 -->
+            <div class="floating-stat-card bottom-right d-none d-sm-flex align-items-center gap-3">
+              <div class="bg-dark p-2 rounded-circle"><i class="bi bi-award-fill text-lime fs-4"></i></div>
+              <div>
+                <strong class="d-block fs-6">Intuit Certified</strong>
+                <span class="small text-light">QuickBooks • Xero • Zoho Expert</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Essential Features (Biztop 3-Card Layout) -->
+  <section class="approach-section">
+    <div class="container">
+      <div class="row align-items-end mb-5">
+        <div class="col-lg-6">
+          <div class="section-label mb-2">Our Approach</div>
+          <h2 class="display-6 fw-bold">Essential features for modern business success</h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="text-muted mb-0">
+            Explore integrated bookkeeping solutions that streamline financial operations, eliminate tax-season stress, and deliver actionable data-driven insights tailored to service businesses.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Card 1: Setup & Migration -->
+        <div class="col-lg-4 col-md-6">
+          <div class="approach-card card-white">
+            <div>
+              <div class="icon-box"><i class="bi bi-folder-check"></i></div>
+              <h3 class="h4 fw-bold mb-3">Setup & Migration</h3>
+              <p class="text-muted">
+                Starting your business books the right way or fixing a messy framework? We build a chart of accounts foundation tailored to your exact industry.
+              </p>
+            </div>
+            <div>
+              <a href="services.html#setup" class="btn-card">Explore Deliverables <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Cleanup & Catchup (Featured Lime) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="approach-card card-lime">
+            <div>
+              <div class="icon-box"><i class="bi bi-tools"></i></div>
+              <h3 class="h4 fw-bold mb-3">Cleanup & Catchup</h3>
+              <p>
+                Months (or years) behind on your financial records? No judgment, just clean-up. Backlog reconciliation, misclassified transaction fixes & forex cleanup.
+              </p>
+            </div>
+            <div>
+              <a href="services.html#cleanup" class="btn-card">Explore Deliverables <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Monthly Bookkeeping (Dark Green) -->
+        <div class="col-lg-4 col-md-6">
+          <div class="approach-card card-dark">
+            <div>
+              <div class="icon-box"><i class="bi bi-bar-chart-line-fill"></i></div>
+              <h3 class="h4 fw-bold mb-3">Monthly Bookkeeping</h3>
+              <p>
+                Stop doing your books at 11pm on a Sunday. Dedicated bookkeeper handling reconciliations, cash flow tracking, and plain-English financial statements.
+              </p>
+            </div>
+            <div>
+              <a href="services.html#monthly" class="btn-card">Explore Deliverables <i class="bi bi-chevron-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Founder Story / Who We Are -->
+  <section class="about-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-5">
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="founder-img-box shadow-lg">
+                <img src="assets/images/wuraola_portrait_1.jpg" alt="Wuraola Oluwalana - Lead Bookkeeper & Founder">
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-badge-box">
+                <h3>10K+</h3>
+                <span class="small fw-bold text-uppercase">Total Completed Reconciliations</span>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="rating-box text-center">
+                <div class="text-warning fs-5 mb-1">★★★★★</div>
+                <h4 class="fw-bold mb-0">4.9 / 5.0</h4>
+                <span class="small text-muted">Avg Client Ratings</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="section-label mb-2">Who We Are</div>
+          <h2 class="display-6 fw-bold mb-3">I traded lab coats for ledgers</h2>
+          <p class="lead text-dark fw-semibold">
+            Hi, I Am Wuraola Oluwalana. I run Crystal Bookkeeping and work exclusively with service-based businesses globally.
+          </p>
+          <p class="text-muted">
+            I went into bookkeeping because I realized something: I was more curious about the numbers behind a business than the numbers in scientific experiments. Today, I hold an Intuit Bookkeeping Certification and work daily in tools like QuickBooks Online, Xero, and Zoho Books — building systems that give business owners real clarity: not just clean books, but books that tell them something useful.
+          </p>
+
+          <div class="quote-highlight">
+            "These are real credentials earned through structured training programs with formal assessments — not participation badges or honorary titles. The Intuit Bookkeeping Certification reflects the quality standard behind everything I deliver."
+          </div>
+
+          <div class="d-flex flex-wrap gap-2 my-4">
+            <span class="software-pill"><i class="bi bi-patch-check-fill text-success"></i> Intuit Certified</span>
+            <span class="software-pill"><i class="bi bi-box-seam-fill text-primary"></i> QuickBooks Online</span>
+            <span class="software-pill"><i class="bi bi-cloud-fill text-info"></i> Xero Expert</span>
+            <span class="software-pill"><i class="bi bi-app-indicator text-warning"></i> Zoho Books Expert</span>
+          </div>
+
+          <a href="about.html" class="btn btn-lime">More About Wuraola <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Packages & Interactive Pricing Estimator -->
+  <section class="pricing-section" id="estimator">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-label justify-content-center mb-2">Crystal Bookkeeping Packages</div>
+        <h2 class="display-6 fw-bold">Transparent pricing for service-based businesses</h2>
+        <p class="text-muted">
+          Services built for growing service businesses — because no two businesses are at the exact same stage.
+        </p>
+      </div>
+
+      <!-- Packages Cards Grid -->
+      <div class="row g-4 mb-5">
+        <!-- Package 1: Setup & Migration -->
+        <div class="col-lg-3 col-md-6">
+          <div class="package-card">
+            <h3 class="h5 fw-bold">1. Setup & Migration</h3>
+            <p class="small text-muted">Starting your business books right or fixing a messy initial setup.</p>
+            <div class="my-3">
+              <span class="small text-muted d-block">Starting from</span>
+              <strong class="fs-3 fw-bold text-dark">₦300,000</strong>
+            </div>
+            <ul class="deliverable-list">
+              <li><i class="bi bi-check-circle-fill"></i> Software configuration (QBO/Xero/Zoho)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Custom Chart of Accounts design</li>
+              <li><i class="bi bi-check-circle-fill"></i> Bank feed rules & account integration</li>
+              <li><i class="bi bi-check-circle-fill"></i> Multi-currency setup (USD/NGN)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Professional invoicing templates</li>
+            </ul>
+            <button class="btn btn-lime-outline w-100" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Setup and Migration">Select Plan</button>
+          </div>
+        </div>
+
+        <!-- Package 2: Cleanup Bookkeeping (Featured) -->
+        <div class="col-lg-3 col-md-6">
+          <div class="package-card featured-pkg">
+            <div class="featured-ribbon">Most Requested</div>
+            <h3 class="h5 fw-bold">2. Cleanup Bookkeeping</h3>
+            <p class="small text-muted">Months or years behind on your books? We'll get you fully current.</p>
+            <div class="my-3">
+              <span class="small text-muted d-block">Starting from</span>
+              <strong class="fs-3 fw-bold text-success">$300 / ₦300k</strong>
+            </div>
+            <ul class="deliverable-list">
+              <li><i class="bi bi-check-circle-fill"></i> Backlog reconciliation (any timeframe)</li>
+              <li><i class="bi bi-check-circle-fill"></i> Fixing misclassified transactions</li>
+              <li><i class="bi bi-check-circle-fill"></i> Forex gain/loss cleanup</li>
+              <li><i class="bi bi-check-circle-fill"></i> Sales tax & COGS reclassifications</li>
+              <li><i class="bi bi-check-circle-fill"></i> Audit-ready financial health picture</li>
+            </ul>
+            <button class="btn btn-lime w-100" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Cleanup Bookkeeping">Select Plan</button>
+          </div>
+        </div>
+
+        <!-- Package 3: Catchup Bookkeeping -->
+        <div class="col-lg-3 col-md-6">
+          <div class="package-card">
+            <h3 class="h5 fw-bold">3. Catchup Bookkeeping</h3>
+            <p class="small text-muted">Rapid catchup for recent months before tax deadlines or investor reporting.</p>
+            <div class="my-3">
+              <span class="small text-muted d-block">Starting from</span>
+              <strong class="fs-3 fw-bold text-dark">Fixed Quote</strong>
+            </div>
+            <ul class="deliverable-list">
+              <li><i class="bi bi-check-circle-fill"></i> Historical transaction data entry</li>
+              <li><i class="bi bi-check-circle-fill"></i> Opening balance reconciliations</li>
+              <li><i class="bi bi-check-circle-fill"></i> Duplicate entry purging</li>
+              <li><i class="bi bi-check-circle-fill"></i> Document collection assistance</li>
+              <li><i class="bi bi-check-circle-fill"></i> Quick turnaround (3-15 days)</li>
+            </ul>
+            <button class="btn btn-lime-outline w-100" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Catchup Bookkeeping">Select Plan</button>
+          </div>
+        </div>
+
+        <!-- Package 4: Monthly Bookkeeping -->
+        <div class="col-lg-3 col-md-6">
+          <div class="package-card">
+            <h3 class="h5 fw-bold">4. Monthly Bookkeeping</h3>
+            <p class="small text-muted">Ongoing monthly support so you can focus 100% on serving clients.</p>
+            <div class="my-3">
+              <span class="small text-muted d-block">Starting from</span>
+              <strong class="fs-3 fw-bold text-dark">₦300,000<span class="fs-6 text-muted">/mo</span></strong>
+            </div>
+            <ul class="deliverable-list">
+              <li><i class="bi bi-check-circle-fill"></i> Monthly reconciliation & documented reporting</li>
+              <li><i class="bi bi-check-circle-fill"></i> P&L & Balance Sheet in plain English</li>
+              <li><i class="bi bi-check-circle-fill"></i> Cash flow tracking & KPI monitoring</li>
+              <li><i class="bi bi-check-circle-fill"></i> Dedicated bookkeeper, always reachable</li>
+              <li><i class="bi bi-check-circle-fill"></i> Monthly video walkthroughs</li>
+            </ul>
+            <button class="btn btn-lime-outline w-100" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Monthly Bookkeeping">Select Plan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Interactive Calculator Section -->
+      <div class="calculator-box mt-5">
+        <div class="row align-items-center">
+          <div class="col-lg-7">
+            <div class="d-flex flex-column flex-sm-row align-items-start align-items-sm-center justify-content-between gap-3 mb-4">
+              <div>
+                <span class="badge-pill-lime mb-2">Instant Estimate</span>
+                <h3 class="h4 fw-bold text-white mb-0">Estimate Your Fixed Project Quote</h3>
+              </div>
+
+              <!-- Currency Switcher Toggle -->
+              <div class="form-check form-switch bg-dark px-3 py-2 rounded-pill border border-secondary m-0">
+                <input class="form-check-input" type="checkbox" id="currencyToggle">
+                <label class="form-check-label text-white small ms-1" for="currencyToggle">Show in ₦ NGN</label>
+              </div>
+            </div>
+
+            <p class="small text-slate mb-4">Select your current bookkeeping scenario to view your estimated fixed price:</p>
+
+            <button class="scenario-btn active" data-scenario="scenarioA">
+              <div class="fw-bold">Scenario A: Messy DIY Books</div>
+              <div class="small opacity-75">Net deposits recorded as sales, missing COGS/tax rules. Starts from $300 / ₦300k.</div>
+            </button>
+
+            <button class="scenario-btn" data-scenario="scenarioB">
+              <div class="fw-bold">Scenario B: Previous Bookkeeper File</div>
+              <div class="small opacity-75">Non-specialist or VA errors, duplicates, wrong mapping. Starts from $400 / ₦400k.</div>
+            </button>
+
+            <button class="scenario-btn" data-scenario="scenarioC">
+              <div class="fw-bold">Scenario C: Monthly Bookkeeping Retainer</div>
+              <div class="small opacity-75">Ongoing monthly reconciliation & plain English financial reporting.</div>
+            </button>
+
+            <button class="scenario-btn" data-scenario="rebuild">
+              <div class="fw-bold">Scenario D: Complete File Rebuild / Bank Statements Only</div>
+              <div class="small opacity-75">No QBO activity or spreadsheets only. Custom assessment required.</div>
+            </button>
+
+            <!-- Months Slider -->
+            <div class="my-4">
+              <div class="d-flex justify-content-between text-white mb-2">
+                <label for="monthsSlider" class="fw-bold">Months Behind / Duration:</label>
+                <span id="monthsValueDisplay" class="fw-bold text-lime">1 Month</span>
+              </div>
+              <input type="range" class="form-range" id="monthsSlider" min="1" max="24" value="1">
+            </div>
+          </div>
+
+          <div class="col-lg-5 ps-lg-5 mt-4 mt-lg-0">
+            <div class="price-display-box">
+              <span class="text-uppercase small text-light d-block mb-2">ESTIMATED FIXED PRICE</span>
+              <div id="calculatedPrice" class="calculated-price">$300</div>
+              <p id="scenarioDescription" class="small text-light mt-3 mb-4">
+                Messy DIY Books: Net deposits as sales, no COGS setup, missing fee breakdowns, sales tax mixed into income.
+              </p>
+              <button class="btn btn-lime w-100" data-bs-toggle="modal" data-bs-target="#bookingModal">
+                Lock In This Quote <i class="bi bi-arrow-right"></i>
+              </button>
+              <span class="small text-muted d-block mt-2">No surprises mid-project. Final price confirmed after file review.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: The 7-Step Cleanup & Onboarding Process -->
+  <section class="process-section" id="process">
+    <div class="container">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6">
+          <div class="section-label mb-2">The Cleanup Process</div>
+          <h2 class="display-6 fw-bold">What happens when you work with us</h2>
+        </div>
+        <div class="col-lg-6">
+          <p class="text-muted">
+            Once you approve the quote and pay deposit, work begins promptly. Cleanup engagements typically run <strong>3 to 15 business days</strong> depending on scope.
+          </p>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <!-- Step 1 -->
+        <div class="col-lg-6">
+          <div class="step-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number">1</div>
+              <h3 class="h5 fw-bold mb-0">Assessment & Proposal</h3>
+            </div>
+            <p class="text-muted mb-0">
+              Full QBO review. Scenario identified. Written cleanup plan and fixed price sent for your approval before work begins.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="col-lg-6">
+          <div class="step-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number">2</div>
+              <h3 class="h5 fw-bold mb-0">Document Collection</h3>
+            </div>
+            <p class="text-muted mb-0">
+              Bank statements, credit card statements, Amazon settlement CSVs, Shopify exports, and supplier invoices collected upfront.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="col-lg-6">
+          <div class="step-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number">3</div>
+              <h3 class="h5 fw-bold mb-0">Foundation & Data Import</h3>
+            </div>
+            <p class="text-muted mb-0">
+              Chart of Accounts rebuilt for your business. Erroneous entries purged first. Historical data pushed oldest first and verified in batches.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="col-lg-6">
+          <div class="step-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number">4</div>
+              <h3 class="h5 fw-bold mb-0">Error Correction</h3>
+            </div>
+            <p class="text-muted mb-0">
+              Duplicates, uncategorized transactions, sales tax reclassification, personal expenses, and product purchases systematically corrected.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="col-lg-6">
+          <div class="step-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number">5</div>
+              <h3 class="h5 fw-bold mb-0">Full Reconciliation</h3>
+            </div>
+            <p class="text-muted mb-0">
+              Every bank account, credit card, and clearing account for every month in the cleanup period reconciled to zero discrepancy.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="col-lg-6">
+          <div class="step-card">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number">6</div>
+              <h3 class="h5 fw-bold mb-0">Review & Sanity Check</h3>
+            </div>
+            <p class="text-muted mb-0">
+              P&L, Balance Sheet, and Transaction Detail reviewed. Gross margin sanity check against known product costs prior to final delivery.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 7 -->
+        <div class="col-lg-12">
+          <div class="step-card bg-white border border-2 border-success shadow-sm">
+            <div class="d-flex align-items-center gap-3 mb-2">
+              <div class="step-number bg-success text-white">7</div>
+              <h3 class="h5 fw-bold text-success mb-0">Delivery & Virtual Walkthrough</h3>
+            </div>
+            <p class="text-muted mb-0">
+              Full reports package, KPI dashboard, virtual walkthrough session, and complete handover report delivered to you with complete peace of mind.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 6: Commitments & Scope Transparency -->
+  <section class="standards-section">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-7">
+          <div class="badge-pill-lime mb-2">Our Commitment To You</div>
+          <h2 class="display-6 fw-bold mb-4">5 Guarantees Behind Every Engagement</h2>
+
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="standard-item-box">
+                <h4 class="h6 fw-bold text-lime"><i class="bi bi-shield-lock-fill me-2"></i>1. Confidentiality</h4>
+                <p class="small text-slate mb-0">Your financial data is handled with the strictest privacy and bank-level security.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="standard-item-box">
+                <h4 class="h6 fw-bold text-lime"><i class="bi bi-check-all me-2"></i>2. Accuracy</h4>
+                <p class="small text-slate mb-0">All work is rigorously reviewed for correctness against source documents before delivery.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="standard-item-box">
+                <h4 class="h6 fw-bold text-lime"><i class="bi bi-chat-dots-fill me-2"></i>3. Communication</h4>
+                <p class="small text-slate mb-0">You will always know the status of your project with milestone updates.</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="standard-item-box">
+                <h4 class="h6 fw-bold text-lime"><i class="bi bi-clock-history me-2"></i>4. Timeliness</h4>
+                <p class="small text-slate mb-0">We respect agreed deadlines and notify you promptly of any dependencies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5">
+          <div class="exclusion-box">
+            <h3 class="h5 fw-bold text-danger mb-3"><i class="bi bi-info-circle-fill me-2"></i>Scope Transparency</h3>
+            <p class="small text-white opacity-90 mb-3">To maintain the highest standards of bookkeeping clarity, please note what is <strong>not included</strong> in standard bookkeeping scope:</p>
+            <ul class="list-unstyled small text-white opacity-90">
+              <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i> Tax preparation or tax filing</li>
+              <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i> Audit support or legal advice</li>
+              <li class="mb-2"><i class="bi bi-x-circle-fill text-danger me-2"></i> Payroll processing (quoted separately if needed)</li>
+              <li class="mb-0"><i class="bi bi-x-circle-fill text-danger me-2"></i> Ongoing monthly bookkeeping (quoted separately from cleanups)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 7: Recommendation & Testimonials -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <div class="text-center max-w-700 mx-auto mb-5">
+        <div class="section-label justify-content-center mb-2">Recommendations</div>
+        <h2 class="display-6 fw-bold">Trusted by certified peers and clients</h2>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="p-4 p-md-5 rounded-4 bg-light border shadow-sm text-center">
+            <div class="text-warning fs-4 mb-3">★★★★★</div>
+            <p class="lead fst-italic text-dark mb-4">
+              "I had the opportunity to study and train alongside Wuraola during our bookkeeping program, and I was consistently impressed by her dedication and attention to detail. Wuraola demonstrated strong bookkeeping fundamentals, including transaction categorization, bank reconciliation, and financial record management. I confidently recommend her to any client looking for a reliable bookkeeper."
+            </p>
+            <h3 class="h5 fw-bold mb-1">Jideofor</h3>
+            <span class="small text-muted fw-semibold">Certified Bookkeeper</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row g-4 mb-5">
+        <div class="col-lg-4">
+          <a class="navbar-brand mb-3" href="index.html">
+            <img src="assets/images/logo-icon.png" alt="Crystal Bookkeeping Logo" style="height:38px; width:auto;">
+            <span>Crystal<span style="color: var(--brand-lime-bright);">Bookkeeping</span></span>
+          </a>
+          <p class="small text-slate mt-3">
+            Making your books crystal clear. Professional bookkeeping and financial reconciliation for service-based businesses globally.
+          </p>
+          <div class="d-flex gap-3 fs-5">
+            <a href="https://www.linkedin.com/in/wuraola-oluwalana" target="_blank" class="text-white"><i class="bi bi-linkedin"></i></a>
+            <a href="https://wa.me/2349033744251" target="_blank" class="text-white"><i class="bi bi-whatsapp"></i></a>
+            <a href="mailto:Crystalbooksconsult@gmail.com" class="text-white"><i class="bi bi-envelope-fill"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-6">
+          <h5>Quick Links</h5>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Founder</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#process">Cleanup Process</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-6">
+          <h5>Services</h5>
+          <ul class="footer-links">
+            <li><a href="services.html#setup">Setup & Migration</a></li>
+            <li><a href="services.html#cleanup">Cleanup Bookkeeping</a></li>
+            <li><a href="services.html#catchup">Catchup Bookkeeping</a></li>
+            <li><a href="services.html#monthly">Monthly Bookkeeping</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h5>Get In Touch</h5>
+          <p class="small text-slate mb-1"><i class="bi bi-envelope-fill text-lime me-2"></i> Crystalbooksconsult@gmail.com</p>
+          <p class="small text-slate mb-1"><i class="bi bi-telephone-fill text-lime me-2"></i> 0903374425 / 07078252701</p>
+          <p class="small text-slate mb-3"><i class="bi bi-whatsapp text-lime me-2"></i> WhatsApp Consultation Available</p>
+          <a href="#bookingModal" class="btn btn-lime btn-sm" data-bs-toggle="modal" data-bs-target="#bookingModal">Book Consultation</a>
+        </div>
+      </div>
+
+      
+      <!-- Contact Strip (moved from top-bar) -->
+      <div class="footer-contact-strip border-top border-secondary pt-4 pb-3 mb-3">
+        <div class="row align-items-center g-3">
+          <div class="col-md-auto">
+            <span class="top-bar-badge"><i class="bi bi-patch-check-fill"></i> Intuit Certified Bookkeeper</span>
+          </div>
+          <div class="col-md">
+            <div class="d-flex flex-wrap gap-3">
+              <a href="mailto:Crystalbooksconsult@gmail.com" class="text-slate text-decoration-none small"><i class="bi bi-envelope-fill text-lime me-1"></i> Crystalbooksconsult@gmail.com</a>
+              <a href="tel:+2349033744251" class="text-slate text-decoration-none small"><i class="bi bi-telephone-fill text-lime me-1"></i> +234 903 374 4251</a>
+              <a href="https://www.linkedin.com/in/wuraola-oluwalana" target="_blank" class="text-slate text-decoration-none small"><i class="bi bi-linkedin text-lime me-1"></i> LinkedIn</a>
+              <a href="https://wa.me/2349033744251" target="_blank" class="text-slate text-decoration-none small"><i class="bi bi-whatsapp text-lime me-1"></i> WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-top border-secondary pt-3 text-center small text-muted">
+        &copy; 2026 Crystal Bookkeeping. All rights reserved. Designed for cPanel hosting.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Booking Modal -->
+  <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0">
+        <div class="modal-header bg-dark text-white rounded-top-4">
+          <h5 class="modal-header-title h5 fw-bold mb-0 text-white" id="bookingModalLabel">
+            <span class="text-lime">💎 Book Consultation</span> with Wuraola
+          </h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4">
+          <form id="bookingForm">
+            <div class="mb-3">
+              <label for="modalClientName" class="form-label fw-semibold">Your Name *</label>
+              <input type="text" class="form-control" id="modalClientName" placeholder="e.g. Jane Doe" required>
+            </div>
+            <div class="row g-3 mb-3">
+              <div class="col-md-6">
+                <label for="modalClientEmail" class="form-label fw-semibold">Email Address *</label>
+                <input type="email" class="form-control" id="modalClientEmail" placeholder="name@company.com" required>
+              </div>
+              <div class="col-md-6">
+                <label for="modalClientPhone" class="form-label fw-semibold">Phone / WhatsApp *</label>
+                <input type="tel" class="form-control" id="modalClientPhone" placeholder="+234..." required>
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="modalServiceSelect" class="form-label fw-semibold">Service Package Needed</label>
+              <select class="form-select" id="modalServiceSelect">
+                <option value="Cleanup Bookkeeping">Cleanup Bookkeeping (Backlog/Messy File)</option>
+                <option value="Setup and Migration">Setup and Migration (New CoA/Software)</option>
+                <option value="Monthly Bookkeeping">Monthly Bookkeeping Retainer</option>
+                <option value="Catchup Bookkeeping">Catchup Bookkeeping</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="modalSoftwareSelect" class="form-label fw-semibold">Primary Accounting Software</label>
+              <select class="form-select" id="modalSoftwareSelect">
+                <option value="QuickBooks Online">QuickBooks Online</option>
+                <option value="Xero">Xero</option>
+                <option value="Zoho Books">Zoho Books</option>
+                <option value="Spreadsheets / None">Spreadsheets / Bank Statements Only</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="modalNotes" class="form-label fw-semibold">Brief Description of Your Books</label>
+              <textarea class="form-control" id="modalNotes" rows="3" placeholder="Tell us how many months behind you are or what needs fixing..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-lime w-100 py-3 fw-bold">
+              Submit & Connect on WhatsApp <i class="bi bi-whatsapp"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+  <script src="js/preloader.js"></script>
+  <script src="js/scroll-reveal.js"></script>
+</body>
+</html>
