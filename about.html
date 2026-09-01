@@ -16,13 +16,72 @@
   <link rel="shortcut icon" href="favicon.ico">
 </head>
 <body class="preloader-active">
-  <!-- ========== PRELOADER ========== -->
+      <!-- ========== PRELOADER ========== -->
   <div id="crystalPreloader">
-    <!-- Book animation -->
-    <div class="preloader-book">
-      <div class="preloader-book__left"></div>
-      <div class="preloader-book__spine"></div>
-      <div class="preloader-book__right"></div>
+    <div class="preloader-stage">
+      <!-- 3D Book Container -->
+      <div class="preloader-book">
+        <!-- Covers & Base Pages -->
+        <div class="preloader-book__cover--left">
+          <div class="preloader-book__page-content">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+        <div class="preloader-book__spine"></div>
+        <div class="preloader-book__cover--right">
+          <div class="preloader-book__page-content">
+            <div class="ledger-lines"></div>
+            <!-- Drawing Signature Line -->
+            <svg class="writing-signature" viewBox="0 0 100 30">
+              <path class="signature-path" d="M5,20 Q20,5 35,18 T65,12 T95,15" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Flipping Pages (Right to Left 3D Flip) -->
+        <div class="preloader-book__flipping-page page-1">
+          <div class="page-side front">
+            <div class="ledger-lines"></div>
+          </div>
+          <div class="page-side back">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+
+        <div class="preloader-book__flipping-page page-2">
+          <div class="page-side front">
+            <div class="ledger-lines"></div>
+          </div>
+          <div class="page-side back">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+
+        <div class="preloader-book__flipping-page page-3">
+          <div class="page-side front">
+            <div class="ledger-lines"></div>
+          </div>
+          <div class="page-side back">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+
+        <!-- Animated Writing Pen -->
+        <div class="preloader-pen">
+          <svg viewBox="0 0 40 40" class="pen-svg">
+            <path d="M28,4 L36,12 L14,34 L6,34 L6,26 Z" fill="url(#penGradient)" stroke="#84CC16" stroke-width="1.5" />
+            <polygon points="6,34 3,37 8,36" fill="#9EF01A" />
+            <circle cx="3" cy="37" r="2" fill="#FFFFFF" class="nib-glow" />
+            <defs>
+              <linearGradient id="penGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1B5E42" />
+                <stop offset="50%" stop-color="#0B3026" />
+                <stop offset="100%" stop-color="#9EF01A" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
     </div>
 
     <!-- Logo + brand name -->
@@ -36,6 +95,11 @@
       <span></span>
       <span></span>
       <span></span>
+    </div>
+
+    <!-- Sound indicator -->
+    <div class="preloader-sound-hint" id="preloaderSoundHint">
+      <i class="bi bi-volume-up-fill"></i> Sound Enabled
     </div>
   </div>
   <!-- ========== END PRELOADER ========== -->
@@ -198,7 +262,7 @@
       </div>
 
       <div class="border-top border-secondary pt-3 text-center small text-muted">
-        &copy; 2026 Crystal Bookkeeping. All rights reserved. Designed for cPanel hosting.
+        &copy; 2026 Crystal Bookkeeping. All rights reserved. Designed by Tonna.
       </div>
     </div>
   </footer>

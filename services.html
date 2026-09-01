@@ -20,13 +20,72 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="preloader-active">
-  <!-- ========== PRELOADER ========== -->
+      <!-- ========== PRELOADER ========== -->
   <div id="crystalPreloader">
-    <!-- Book animation -->
-    <div class="preloader-book">
-      <div class="preloader-book__left"></div>
-      <div class="preloader-book__spine"></div>
-      <div class="preloader-book__right"></div>
+    <div class="preloader-stage">
+      <!-- 3D Book Container -->
+      <div class="preloader-book">
+        <!-- Covers & Base Pages -->
+        <div class="preloader-book__cover--left">
+          <div class="preloader-book__page-content">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+        <div class="preloader-book__spine"></div>
+        <div class="preloader-book__cover--right">
+          <div class="preloader-book__page-content">
+            <div class="ledger-lines"></div>
+            <!-- Drawing Signature Line -->
+            <svg class="writing-signature" viewBox="0 0 100 30">
+              <path class="signature-path" d="M5,20 Q20,5 35,18 T65,12 T95,15" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Flipping Pages (Right to Left 3D Flip) -->
+        <div class="preloader-book__flipping-page page-1">
+          <div class="page-side front">
+            <div class="ledger-lines"></div>
+          </div>
+          <div class="page-side back">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+
+        <div class="preloader-book__flipping-page page-2">
+          <div class="page-side front">
+            <div class="ledger-lines"></div>
+          </div>
+          <div class="page-side back">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+
+        <div class="preloader-book__flipping-page page-3">
+          <div class="page-side front">
+            <div class="ledger-lines"></div>
+          </div>
+          <div class="page-side back">
+            <div class="ledger-lines"></div>
+          </div>
+        </div>
+
+        <!-- Animated Writing Pen -->
+        <div class="preloader-pen">
+          <svg viewBox="0 0 40 40" class="pen-svg">
+            <path d="M28,4 L36,12 L14,34 L6,34 L6,26 Z" fill="url(#penGradient)" stroke="#84CC16" stroke-width="1.5" />
+            <polygon points="6,34 3,37 8,36" fill="#9EF01A" />
+            <circle cx="3" cy="37" r="2" fill="#FFFFFF" class="nib-glow" />
+            <defs>
+              <linearGradient id="penGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#1B5E42" />
+                <stop offset="50%" stop-color="#0B3026" />
+                <stop offset="100%" stop-color="#9EF01A" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
     </div>
 
     <!-- Logo + brand name -->
@@ -40,6 +99,11 @@
       <span></span>
       <span></span>
       <span></span>
+    </div>
+
+    <!-- Sound indicator -->
+    <div class="preloader-sound-hint" id="preloaderSoundHint">
+      <i class="bi bi-volume-up-fill"></i> Sound Enabled
     </div>
   </div>
   <!-- ========== END PRELOADER ========== -->
@@ -70,83 +134,91 @@
     </div>
   </nav>
 
-  <!-- Hero Header Banner -->
+  <!-- =========================================================================
+       HERO HEADER BANNER (Left Aligned Green Gradient)
+       ========================================================================= -->
   <section class="services-hero-banner text-white py-5">
-    <div class="container py-4 text-center">
-      <div class="badge-pill-lime mb-3">
-        <i class="bi bi-award-fill"></i> Certified Bookkeeping Packages
-      </div>
-      <h1 class="display-4 fw-bold mb-3">
-        Transparent, Fixed-Price Bookkeeping<br class="d-none d-md-block">
-        <span class="text-lime">Built for Service Businesses</span>
-      </h1>
-      <p class="lead text-light max-w-700 mx-auto mb-4">
-        From setting up your chart of accounts to forensic cleanups and hands-off monthly management — get 100% audit-ready financials with zero surprise bills.
-      </p>
+    <div class="container py-4">
+      <div class="row align-items-center">
+        <div class="col-lg-9">
+          <div class="badge-pill-lime mb-3">
+            <i class="bi bi-patch-check-fill"></i> Certified Bookkeeping Packages
+          </div>
+          <h1 class="display-4 fw-bold mb-3 text-start">
+            Transparent, Fixed-Price Bookkeeping<br>
+            <span class="text-lime">Built for Service Businesses</span>
+          </h1>
+          <p class="lead text-slate mb-4 text-start" style="max-width: 680px;">
+            From initial software setup and chart of accounts architecture to deep forensic cleanups and hands-off monthly management — audit-ready books with zero surprise bills.
+          </p>
 
-      <!-- Quick Navigation Jump Pills -->
-      <div class="d-flex flex-wrap justify-content-center gap-2 mb-4">
-        <a href="#setup" class="nav-pill-jump"><i class="bi bi-gear-fill"></i> 01. Setup & Migration</a>
-        <a href="#cleanup" class="nav-pill-jump"><i class="bi bi-brush-fill"></i> 02. Cleanup Bookkeeping</a>
-        <a href="#catchup" class="nav-pill-jump"><i class="bi bi-lightning-charge-fill"></i> 03. Catchup</a>
-        <a href="#monthly" class="nav-pill-jump"><i class="bi bi-calendar-check-fill"></i> 04. Monthly Retainer</a>
-        <a href="#comparison" class="nav-pill-jump"><i class="bi bi-table"></i> Compare Packages</a>
-      </div>
+          <!-- Quick Navigation Jump Pills (Left Aligned) -->
+          <div class="d-flex flex-wrap gap-2 mb-4">
+            <a href="#setup" class="nav-pill-jump"><i class="bi bi-gear-fill"></i> 01. Setup & Migration</a>
+            <a href="#cleanup" class="nav-pill-jump"><i class="bi bi-brush-fill"></i> 02. Cleanup Bookkeeping</a>
+            <a href="#catchup" class="nav-pill-jump"><i class="bi bi-lightning-charge-fill"></i> 03. Catchup</a>
+            <a href="#monthly" class="nav-pill-jump"><i class="bi bi-calendar-check-fill"></i> 04. Monthly Retainer</a>
+            <a href="#comparison" class="nav-pill-jump"><i class="bi bi-table"></i> Compare Packages</a>
+          </div>
 
-      <!-- Trust Compatibility Strip -->
-      <div class="d-inline-flex flex-wrap justify-content-center align-items-center gap-3 pt-3 border-top border-secondary opacity-75 small">
-        <span><i class="bi bi-check-circle-fill text-lime me-1"></i> Intuit QuickBooks Online</span>
-        <span>•</span>
-        <span><i class="bi bi-check-circle-fill text-lime me-1"></i> Xero Certified Advisor</span>
-        <span>•</span>
-        <span><i class="bi bi-check-circle-fill text-lime me-1"></i> Zoho Books Specialist</span>
-        <span>•</span>
-        <span><i class="bi bi-shield-lock-fill text-lime me-1"></i> Bank-Grade Confidentiality</span>
+          <!-- Trust Badges Strip (Left Aligned) -->
+          <div class="d-flex flex-wrap align-items-center gap-3 pt-3 border-top border-secondary text-slate small">
+            <span><i class="bi bi-check-circle-fill text-lime me-1"></i> Intuit QuickBooks Online</span>
+            <span>•</span>
+            <span><i class="bi bi-check-circle-fill text-lime me-1"></i> Xero Certified Advisor</span>
+            <span>•</span>
+            <span><i class="bi bi-check-circle-fill text-lime me-1"></i> Zoho Books Specialist</span>
+            <span>•</span>
+            <span><i class="bi bi-shield-lock-fill text-lime me-1"></i> Bank-Grade Confidentiality</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       PACKAGE 01: Setup and Migration
+       PACKAGE 01: Setup and Migration (Left Horizontal Card)
        ========================================================================= -->
   <section class="py-5 bg-white" id="setup">
     <div class="container py-3">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-5">
-          <span class="badge-pill-lime mb-2">Package 01</span>
-          <h2 class="h1 fw-bold text-dark mb-3">Setup & Migration</h2>
-          <p class="lead text-muted mb-4">
-            Starting your business books the right way (or fixing a flawed initial setup)? We design an ironclad accounting architecture tailored to your specific industry workflow.
-          </p>
+      <div class="service-pkg-card mint-accent">
+        <div class="row g-5 align-items-start text-start">
+          <div class="col-lg-5">
+            <span class="badge-pill-lime mb-2">Package 01</span>
+            <h2 class="h2 fw-bold text-dark mb-3">Setup & Migration</h2>
+            <p class="text-muted mb-4">
+              Starting your business books the right way (or fixing a flawed initial setup)? We build an ironclad accounting foundation tailored to your exact service workflows.
+            </p>
 
-          <div class="p-4 rounded-4 bg-light border mb-4">
-            <div class="d-flex justify-content-between align-items-center mb-2">
-              <span class="text-uppercase small fw-bold text-muted">Starting Investment</span>
-              <span class="badge bg-dark text-lime">One-Time Project</span>
+            <div class="price-pill-tag mb-4">
+              <div class="d-flex justify-content-between align-items-center mb-1">
+                <span class="text-uppercase small fw-bold text-muted">Fixed Project Fee</span>
+                <span class="badge bg-dark text-lime">One-Time Scope</span>
+              </div>
+              <div class="fs-2 fw-bold text-dark mb-1">
+                From <span class="text-success">₦300,000</span> <span class="fs-6 text-muted fw-normal">($300 USD)</span>
+              </div>
+              <div class="small text-muted"><i class="bi bi-clock-history text-success me-1"></i> Typical Delivery: <strong>3 to 7 Business Days</strong></div>
             </div>
-            <div class="fs-2 fw-bold text-dark mb-1">Starting from <span class="text-success">₦300,000</span> <span class="fs-6 text-muted fw-normal">($300 USD)</span></div>
-            <div class="small text-muted"><i class="bi bi-clock-history text-lime me-1"></i> Typical Delivery: <strong>3 to 7 Business Days</strong></div>
+
+            <div class="mb-4">
+              <h5 class="h6 fw-bold text-uppercase text-dark mb-2">Who This Package Is For:</h5>
+              <ul class="list-unstyled small text-muted mb-0">
+                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Founders launching a new business and setting up software from scratch.</li>
+                <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i> Companies migrating from spreadsheets/Excel to QuickBooks, Xero, or Zoho.</li>
+                <li><i class="bi bi-check-circle text-success me-2"></i> Agencies expanding into multi-currency billing (USD, GBP, EUR, NGN).</li>
+              </ul>
+            </div>
+
+            <a href="#bookingModal" class="btn btn-lime w-100 justify-content-center py-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Setup and Migration">
+              Request Setup Consultation <i class="bi bi-arrow-right"></i>
+            </a>
           </div>
 
-          <div class="mb-4">
-            <h5 class="h6 fw-bold text-uppercase text-muted mb-2">Who This Package Is For:</h5>
-            <ul class="list-unstyled small text-secondary mb-0">
-              <li class="mb-2"><i class="bi bi-arrow-right-circle text-success me-2"></i> New businesses launching and needing proper software setup from Day 1.</li>
-              <li class="mb-2"><i class="bi bi-arrow-right-circle text-success me-2"></i> Companies migrating from Excel spreadsheets to QuickBooks, Xero, or Zoho.</li>
-              <li><i class="bi bi-arrow-right-circle text-success me-2"></i> Businesses expanding to multi-currency operations (USD, GBP, EUR, NGN).</li>
-            </ul>
-          </div>
-
-          <a href="#bookingModal" class="btn btn-lime btn-lg w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Setup and Migration">
-            Request Setup Consultation <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
-
-        <div class="col-lg-7">
-          <div class="service-pkg-card">
+          <div class="col-lg-7">
             <div class="d-flex align-items-center justify-content-between mb-4">
-              <h3 class="h4 fw-bold text-dark mb-0"><i class="bi bi-box-seam-fill text-lime me-2"></i> Included Deliverables</h3>
-              <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-2 rounded-pill">Comprehensive Scope</span>
+              <h3 class="h5 fw-bold text-dark mb-0"><i class="bi bi-box-seam-fill text-lime me-2"></i> Included Deliverables</h3>
+              <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill">Complete Architecture</span>
             </div>
 
             <div class="row g-3">
@@ -155,7 +227,7 @@
                   <div class="deliverable-icon-box"><i class="bi bi-sliders"></i></div>
                   <div>
                     <h4 class="h6 fw-bold text-dark mb-1">Software Configuration</h4>
-                    <p class="small text-muted mb-0">Company profile, fiscal year, tax rules, and currency setup in QBO, Xero, or Zoho.</p>
+                    <p class="small text-muted mb-0">Profile, fiscal year, tax rules, and currency setup in QBO, Xero, or Zoho.</p>
                   </div>
                 </div>
               </div>
@@ -165,7 +237,7 @@
                   <div class="deliverable-icon-box"><i class="bi bi-diagram-3-fill"></i></div>
                   <div>
                     <h4 class="h6 fw-bold text-dark mb-1">Chart of Accounts Design</h4>
-                    <p class="small text-muted mb-0">Customized structure mapped to your business revenue streams and expense lines.</p>
+                    <p class="small text-muted mb-0">Custom account structure mapped to revenue streams and expense lines.</p>
                   </div>
                 </div>
               </div>
@@ -175,7 +247,7 @@
                   <div class="deliverable-icon-box"><i class="bi bi-bank2"></i></div>
                   <div>
                     <h4 class="h6 fw-bold text-dark mb-1">Bank & Payment Feeds</h4>
-                    <p class="small text-muted mb-0">Direct sync with business bank accounts, Stripe, PayPal, and automatic bank rules.</p>
+                    <p class="small text-muted mb-0">Direct sync with business bank accounts, Stripe, PayPal & bank feed rules.</p>
                   </div>
                 </div>
               </div>
@@ -185,7 +257,7 @@
                   <div class="deliverable-icon-box"><i class="bi bi-currency-exchange"></i></div>
                   <div>
                     <h4 class="h6 fw-bold text-dark mb-1">Multi-Currency Setup</h4>
-                    <p class="small text-muted mb-0">Foreign exchange revaluation setup for businesses receiving international funds.</p>
+                    <p class="small text-muted mb-0">Forex revaluation setup for businesses billing clients in foreign currencies.</p>
                   </div>
                 </div>
               </div>
@@ -195,7 +267,7 @@
                   <div class="deliverable-icon-box"><i class="bi bi-file-earmark-check-fill"></i></div>
                   <div>
                     <h4 class="h6 fw-bold text-dark mb-1">Opening Balance Rec</h4>
-                    <p class="small text-muted mb-0">Entering opening balance sheet figures and tying off to verified bank statements.</p>
+                    <p class="small text-muted mb-0">Entering opening balance figures and reconciling to verified bank statements.</p>
                   </div>
                 </div>
               </div>
@@ -205,7 +277,7 @@
                   <div class="deliverable-icon-box"><i class="bi bi-receipt-cutoff"></i></div>
                   <div>
                     <h4 class="h6 fw-bold text-dark mb-1">Branded Invoicing</h4>
-                    <p class="small text-muted mb-0">Custom invoice design with payment gateway integration for faster client payouts.</p>
+                    <p class="small text-muted mb-0">Professional invoice templates with payment gateway links for client billing.</p>
                   </div>
                 </div>
               </div>
@@ -217,19 +289,63 @@
   </section>
 
   <!-- =========================================================================
-       PACKAGE 02: Cleanup Bookkeeping
+       PACKAGE 02: Cleanup Bookkeeping (Left Horizontal Card)
        ========================================================================= -->
-  <section class="py-5 bg-cream" id="cleanup">
+  <section class="py-5" style="background-color: var(--bg-cream);" id="cleanup">
     <div class="container py-3">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-7 order-lg-1">
-          <div class="service-pkg-card">
-            <div class="d-flex align-items-center justify-content-between mb-4">
-              <div>
-                <span class="badge-pill-lime mb-2">Package 02</span>
-                <h3 class="h4 fw-bold text-dark mb-0"><i class="bi bi-magic text-lime me-2"></i> What We Fix & Reconcile</h3>
+      <div class="service-pkg-card">
+        <div class="row g-5 align-items-start text-start">
+          <div class="col-lg-5">
+            <span class="badge-pill-lime mb-2">Package 02</span>
+            <h2 class="h2 fw-bold text-dark mb-3">Cleanup Bookkeeping</h2>
+            <p class="text-muted mb-4">
+              Months (or years) behind? Unbalanced bank feeds? No judgment, just pure financial forensic clarity. We turn messy files into audit-proof ledgers.
+            </p>
+
+            <h5 class="h6 fw-bold text-uppercase text-dark mb-3">Estimated Pricing Scenarios:</h5>
+
+            <!-- Scenario A -->
+            <div class="p-3 rounded-3 bg-light border mb-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block text-dark small">Scenario A: Messy DIY Books</strong>
+                  <span class="text-muted" style="font-size: 0.8rem;">Setup exists but transactions are disorganized</span>
+                </div>
+                <span class="badge bg-success bg-opacity-10 text-success fw-bold">From ₦300k</span>
               </div>
-              <span class="badge bg-dark text-lime fw-bold px-3 py-2 rounded-pill">Forensic Cleanup</span>
+            </div>
+
+            <!-- Scenario B -->
+            <div class="p-3 rounded-3 bg-light border mb-2">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block text-dark small">Scenario B: Prior Bookkeeper Errors</strong>
+                  <span class="text-muted" style="font-size: 0.8rem;">Incorrect reconciliations & multi-currency errors</span>
+                </div>
+                <span class="badge bg-success bg-opacity-10 text-success fw-bold">From ₦400k</span>
+              </div>
+            </div>
+
+            <!-- Scenario C -->
+            <div class="p-3 rounded-3 bg-light border mb-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <strong class="d-block text-dark small">Scenario C: Multi-Year Rebuild</strong>
+                  <span class="text-muted" style="font-size: 0.8rem;">Reconstruction from raw PDFs & statements</span>
+                </div>
+                <span class="badge bg-dark text-lime fw-bold">Custom Quote</span>
+              </div>
+            </div>
+
+            <a href="#bookingModal" class="btn btn-lime w-100 justify-content-center py-3" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Cleanup Bookkeeping">
+              Book Diagnostic Cleanup Call <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="d-flex align-items-center justify-content-between mb-4">
+              <h3 class="h5 fw-bold text-dark mb-0"><i class="bi bi-magic text-lime me-2"></i> What We Fix & Reconcile</h3>
+              <span class="badge bg-dark text-lime fw-bold px-3 py-1 rounded-pill">Forensic Cleanup</span>
             </div>
 
             <div class="row g-3 mb-4">
@@ -274,8 +390,7 @@
               </div>
             </div>
 
-            <!-- Value Highlight Banner -->
-            <div class="p-3 rounded-3 bg-white border d-flex align-items-center gap-3">
+            <div class="p-3 rounded-3 bg-light border d-flex align-items-center gap-3">
               <i class="bi bi-shield-check fs-2 text-success"></i>
               <div class="small">
                 <strong class="d-block text-dark">The Crystal Clean Guarantee:</strong>
@@ -284,72 +399,25 @@
             </div>
           </div>
         </div>
-
-        <div class="col-lg-5 order-lg-2">
-          <span class="badge-pill-lime mb-2">Package 02</span>
-          <h2 class="h1 fw-bold text-dark mb-3">Cleanup Bookkeeping</h2>
-          <p class="lead text-muted mb-4">
-            Months (or years) behind? Unbalanced bank feeds? No judgment, just pure financial forensic clarity. We turn messy files into audit-proof ledgers.
-          </p>
-
-          <h5 class="h6 fw-bold text-uppercase text-muted mb-3">Estimated Pricing Scenarios:</h5>
-
-          <!-- Scenario A -->
-          <div class="p-3 rounded-4 bg-white border mb-3 shadow-sm">
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <strong class="d-block text-dark">Scenario A: Messy DIY Books</strong>
-                <span class="small text-muted">Software setup exists but transactions are disorganized</span>
-              </div>
-              <span class="badge bg-success bg-opacity-10 text-success fw-bold">From ₦300,000</span>
-            </div>
-          </div>
-
-          <!-- Scenario B -->
-          <div class="p-3 rounded-4 bg-white border mb-3 shadow-sm">
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <strong class="d-block text-dark">Scenario B: Prior Bookkeeper Errors</strong>
-                <span class="small text-muted">Incorrect reconciliations, multi-currency errors, sales tax messes</span>
-              </div>
-              <span class="badge bg-success bg-opacity-10 text-success fw-bold">From ₦400,000</span>
-            </div>
-          </div>
-
-          <!-- Scenario C -->
-          <div class="p-3 rounded-4 bg-white border mb-4 shadow-sm">
-            <div class="d-flex justify-content-between align-items-center">
-              <div>
-                <strong class="d-block text-dark">Scenario C: Multi-Year Rebuild</strong>
-                <span class="small text-muted">Full reconstruction from bank PDFs and raw statements</span>
-              </div>
-              <span class="badge bg-dark text-lime fw-bold">Custom Quote</span>
-            </div>
-          </div>
-
-          <a href="#bookingModal" class="btn btn-lime btn-lg w-100 justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal" data-service="Cleanup Bookkeeping">
-            Book Diagnostic Cleanup Call <i class="bi bi-arrow-right"></i>
-          </a>
-        </div>
       </div>
     </div>
   </section>
 
   <!-- =========================================================================
-       PACKAGE 03 & 04: Catchup & Monthly Retainer
+       PACKAGE 03 & 04: Catchup & Monthly Retainer (Side by Side)
        ========================================================================= -->
   <section class="py-5 bg-white">
     <div class="container py-3">
-      <div class="text-center mb-5">
+      <div class="text-start mb-5">
         <span class="badge-pill-lime mb-2">Fast-Track & Retainers</span>
-        <h2 class="display-6 fw-bold text-dark">Ongoing & Expedited Solutions</h2>
-        <p class="text-muted max-w-700 mx-auto">Choose between rapid turnaround for immediate compliance or full-service monthly financial management.</p>
+        <h2 class="display-6 fw-bold text-dark mb-2">Ongoing & Expedited Solutions</h2>
+        <p class="text-muted" style="max-width: 650px;">Choose between rapid turnaround for immediate compliance or full-service monthly financial management.</p>
       </div>
 
-      <div class="row g-4 align-items-stretch">
+      <div class="row g-4 align-items-stretch text-start">
         <!-- Package 03: Catchup Bookkeeping -->
         <div class="col-lg-6" id="catchup">
-          <div class="service-pkg-card h-100 d-flex flex-direction-column justify-content-between">
+          <div class="service-pkg-card h-100 d-flex flex-column justify-content-between">
             <div>
               <div class="d-flex justify-content-between align-items-start mb-3">
                 <div>
@@ -364,16 +432,18 @@
                 Need your books updated immediately for an upcoming tax deadline, investor pitch, or audit? We expedite backlog processing with guaranteed precision.
               </p>
 
-              <div class="price-pill-tag mb-4 w-100">
+              <div class="price-pill-tag mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-2 pb-2 border-bottom border-light-subtle">
+                  <span class="small text-muted text-uppercase fw-bold" style="font-size: 0.72rem; letter-spacing: 0.05em;">
+                    <i class="bi bi-clock-history text-success me-1"></i> Turnaround Time
+                  </span>
+                  <strong class="text-dark small">3 to 15 Business Days</strong>
+                </div>
                 <div class="d-flex justify-content-between align-items-center">
-                  <div>
-                    <span class="small text-muted d-block fw-bold text-uppercase">Turnaround Time</span>
-                    <strong class="text-dark"><i class="bi bi-stopwatch text-lime me-1"></i> 3 to 15 Business Days</strong>
-                  </div>
-                  <div class="text-end">
-                    <span class="small text-muted d-block fw-bold text-uppercase">Pricing</span>
-                    <strong class="text-success fs-5">Tiered Flat Fee</strong>
-                  </div>
+                  <span class="small text-muted text-uppercase fw-bold" style="font-size: 0.72rem; letter-spacing: 0.05em;">
+                    <i class="bi bi-tag-fill text-success me-1"></i> Pricing Model
+                  </span>
+                  <span class="badge bg-success bg-opacity-10 text-success fw-bold px-3 py-1 rounded-pill">Tiered Flat Fee</span>
                 </div>
               </div>
 
@@ -392,9 +462,9 @@
           </div>
         </div>
 
-        <!-- Package 04: Monthly Bookkeeping (Featured) -->
+        <!-- Package 04: Monthly Bookkeeping (Featured Dark Green Gradient) -->
         <div class="col-lg-6" id="monthly">
-          <div class="service-pkg-card dark-theme h-100 d-flex flex-direction-column justify-content-between position-relative">
+          <div class="service-pkg-card gradient-dark h-100 d-flex flex-column justify-content-between position-relative">
             <span class="featured-ribbon">⭐ Most Popular Retainer</span>
 
             <div>
@@ -411,7 +481,7 @@
                 Stop doing bookkeeping at 11 PM on Sundays. Hand off monthly reconciliations, payroll entries, and reporting so you can focus 100% on revenue growth.
               </p>
 
-              <div class="price-pill-tag dark-tag mb-4 w-100">
+              <div class="price-pill-tag dark-tag mb-4">
                 <div class="d-flex justify-content-between align-items-center">
                   <div>
                     <span class="small text-slate d-block fw-bold text-uppercase">Monthly Retainer</span>
@@ -440,14 +510,14 @@
   </section>
 
   <!-- =========================================================================
-       PACKAGE COMPARISON MATRIX
+       PACKAGE COMPARISON MATRIX (Left Aligned Table)
        ========================================================================= -->
-  <section class="py-5 bg-cream" id="comparison">
+  <section class="py-5" style="background-color: var(--bg-cream);" id="comparison">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-start mb-5">
         <span class="badge-pill-lime mb-2">Feature Matrix</span>
-        <h2 class="display-6 fw-bold text-dark">Compare All 4 Packages At A Glance</h2>
-        <p class="text-muted max-w-700 mx-auto">Find the exact scope that fits your current business stage.</p>
+        <h2 class="display-6 fw-bold text-dark mb-2">Compare All 4 Packages At A Glance</h2>
+        <p class="text-muted" style="max-width: 650px;">Find the exact scope and turnaround that fits your current business stage.</p>
       </div>
 
       <div class="comparison-table-wrapper table-responsive">
@@ -467,35 +537,35 @@
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-dash text-muted"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="highlight-col"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td><strong>Custom Chart of Accounts Design</strong></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-dash text-muted"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="highlight-col"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td><strong>Bank, Card & Payment Feed Setup</strong></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="highlight-col"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td><strong>Historical Backlog Forensic Cleanup</strong></td>
               <td><i class="bi bi-dash text-muted"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i> (All years)</td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i> (Recent)</td>
-              <td><i class="bi bi-dash text-muted"></i></td>
+              <td class="highlight-col"><i class="bi bi-dash text-muted"></i></td>
             </tr>
             <tr>
               <td><strong>Multi-Currency / Forex Adjustments</strong></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
               <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
-              <td><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
+              <td class="highlight-col"><i class="bi bi-check-circle-fill text-success fs-5"></i></td>
             </tr>
             <tr>
               <td><strong>Monthly Financial Reporting (P&L, Balance Sheet)</strong></td>
@@ -515,7 +585,7 @@
               <td><strong>Starting Investment</strong></td>
               <td><strong>From ₦300,000</strong></td>
               <td><strong>From ₦300,000</strong></td>
-              <td><strong>Custom Quote</strong></td>
+              <td><strong>Tiered Quote</strong></td>
               <td class="highlight-col"><strong class="text-dark">From ₦300,000/mo</strong></td>
             </tr>
           </tbody>
@@ -525,17 +595,17 @@
   </section>
 
   <!-- =========================================================================
-       THE CRYSTAL STANDARD / VALUE GUARANTEES
+       THE CRYSTAL STANDARD / VALUE GUARANTEES (Left Aligned)
        ========================================================================= -->
   <section class="py-5 bg-white">
     <div class="container py-4">
-      <div class="text-center mb-5">
+      <div class="text-start mb-5">
         <span class="badge-pill-lime mb-2">Our Guarantees</span>
-        <h2 class="display-6 fw-bold text-dark">The Crystal Bookkeeping Standard</h2>
-        <p class="text-muted max-w-700 mx-auto">Every project and retainer is backed by our unwavering commitment to precision and confidentiality.</p>
+        <h2 class="display-6 fw-bold text-dark mb-2">The Crystal Bookkeeping Standard</h2>
+        <p class="text-muted" style="max-width: 650px;">Every project and retainer is backed by our unwavering commitment to precision, transparency, and confidentiality.</p>
       </div>
 
-      <div class="row g-4">
+      <div class="row g-4 text-start">
         <div class="col-md-4">
           <div class="guarantee-card">
             <div class="guarantee-icon"><i class="bi bi-patch-check-fill"></i></div>
@@ -548,7 +618,7 @@
           <div class="guarantee-card">
             <div class="guarantee-icon"><i class="bi bi-chat-heart-fill"></i></div>
             <h3 class="h5 fw-bold text-dark mb-2">Plain English Insights</h3>
-            <p class="small text-muted mb-0">No confusing debits and credits jargon. We explain your margins, cash runway, and profitability in simple terms you can use.</p>
+            <p class="small text-muted mb-0">No confusing accounting jargon. We explain your margins, cash runway, and profitability in simple terms you can use.</p>
           </div>
         </div>
 
@@ -564,19 +634,19 @@
   </section>
 
   <!-- =========================================================================
-       BOTTOM CTA BANNER
+       BOTTOM CTA BANNER (Left Aligned Green Gradient)
        ========================================================================= -->
-  <section class="py-5 text-white" style="background-color: var(--bg-dark-forest);">
+  <section class="py-5 text-white" style="background: linear-gradient(135deg, #07261E 0%, #0B3026 100%); border-top: 1px solid rgba(158,240,26,0.2);">
     <div class="container py-4">
       <div class="row align-items-center justify-content-between g-4">
-        <div class="col-lg-7">
+        <div class="col-lg-7 text-start">
           <span class="badge-pill-lime mb-3">Get Started Today</span>
           <h2 class="display-6 fw-bold text-white mb-3">Not Sure Which Package Your Books Need?</h2>
           <p class="lead text-slate mb-0">
             Book a complimentary 15-minute diagnostic file review with Wuraola. We’ll analyze your current accounting setup and recommend the exact right plan.
           </p>
         </div>
-        <div class="col-lg-4 text-lg-end">
+        <div class="col-lg-4 text-start text-lg-end">
           <a href="#bookingModal" class="btn btn-lime btn-lg w-100 mb-2 justify-content-center" data-bs-toggle="modal" data-bs-target="#bookingModal">
             Book Diagnostic Call <i class="bi bi-arrow-right"></i>
           </a>
@@ -594,7 +664,7 @@
   <footer class="site-footer">
     <div class="container">
       <div class="row g-4 mb-5">
-        <div class="col-lg-4">
+        <div class="col-lg-4 text-start">
           <a class="navbar-brand mb-3" href="index.html">
             <img src="assets/images/logo-icon.png" alt="Crystal Bookkeeping Logo" style="height:38px; width:auto;">
             <span>Crystal<span style="color: var(--brand-lime-bright);">Bookkeeping</span></span>
@@ -609,7 +679,7 @@
           </div>
         </div>
 
-        <div class="col-lg-2 col-6">
+        <div class="col-lg-2 col-6 text-start">
           <h5>Quick Links</h5>
           <ul class="footer-links">
             <li><a href="index.html">Home</a></li>
@@ -620,7 +690,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-3 col-6">
+        <div class="col-lg-3 col-6 text-start">
           <h5>Services</h5>
           <ul class="footer-links">
             <li><a href="services.html#setup">Setup & Migration</a></li>
@@ -630,7 +700,7 @@
           </ul>
         </div>
 
-        <div class="col-lg-3">
+        <div class="col-lg-3 text-start">
           <h5>Get In Touch</h5>
           <p class="small text-slate mb-1"><i class="bi bi-envelope-fill text-lime me-2"></i> Crystalbooksconsult@gmail.com</p>
           <p class="small text-slate mb-1"><i class="bi bi-telephone-fill text-lime me-2"></i> 09033714425 / 07078252701</p>
@@ -640,7 +710,7 @@
       </div>
 
       <div class="border-top border-secondary pt-3 text-center small text-muted">
-        &copy; 2026 Crystal Bookkeeping. All rights reserved. Designed for cPanel hosting.
+        &copy; 2026 Crystal Bookkeeping. All rights reserved. Designed by Tonna.
       </div>
     </div>
   </footer>
@@ -653,7 +723,7 @@
           <h5 class="modal-title h5 fw-bold text-white mb-0" id="bookingModalLabel"><span class="text-lime">Book Consultation</span> with Wuraola</h5>
           <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body p-4">
+        <div class="modal-body p-4 text-start">
           <p class="small text-slate mb-4">
             Fill in your details below and we’ll immediately initiate your consultation on WhatsApp with your project scope pre-loaded.
           </p>
