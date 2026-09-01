@@ -153,7 +153,7 @@ function initBookingModal() {
         `*Accounting Software:* ${encodeURIComponent(software)}%0A` +
         `*Details/Notes:* ${encodeURIComponent(notes || 'N/A')}`;
 
-      const whatsappUrl = `https://wa.me/2349033744251?text=${messageText}`;
+      const whatsappUrl = `https://wa.me/2349033714425?text=${messageText}`;
 
       // Open WhatsApp in new tab
       window.open(whatsappUrl, '_blank');
