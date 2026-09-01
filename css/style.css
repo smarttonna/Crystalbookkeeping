@@ -926,3 +926,179 @@ h1, h2, h3, h4, h5, h6 { font-weight: 700; letter-spacing: -0.02em; }
   .site-footer { padding: 40px 0 20px; }
   .calculator-box { padding: 22px 16px; }
 }
+
+/* ==========================================================================
+   SERVICES PAGE MODERN STYLES
+   ========================================================================== */
+.services-hero-banner {
+  background: radial-gradient(circle at 80% 20%, rgba(158,240,26,0.12) 0%, rgba(11,48,38,1) 70%);
+  position: relative;
+  overflow: hidden;
+}
+.nav-pill-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #FFFFFF !important;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+.nav-pill-jump:hover, .nav-pill-jump.active {
+  background: var(--brand-lime-bright);
+  color: var(--bg-dark-forest) !important;
+  border-color: var(--brand-lime-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(158,240,26,0.3);
+}
+
+.service-pkg-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 24px;
+  padding: 38px 32px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+.service-pkg-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.service-pkg-card.dark-theme {
+  background: var(--bg-dark-forest);
+  border-color: rgba(158,240,26,0.3);
+  color: #FFFFFF;
+}
+
+.deliverable-item {
+  background: var(--bg-cream);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 16px;
+  padding: 18px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  transition: all 0.2s ease;
+  height: 100%;
+}
+.deliverable-item:hover {
+  background: #FFFFFF;
+  border-color: rgba(132,204,22,0.4);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(3px);
+}
+.deliverable-item.dark-mode {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #FFFFFF;
+}
+.deliverable-item.dark-mode:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(158,240,26,0.4);
+}
+.deliverable-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: rgba(132,204,22,0.18);
+  color: var(--bg-dark-forest);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.deliverable-item.dark-mode .deliverable-icon-box {
+  background: rgba(158,240,26,0.2);
+  color: var(--brand-lime-bright);
+}
+
+.price-pill-tag {
+  background: rgba(132,204,22,0.12);
+  border: 1px solid rgba(132,204,22,0.3);
+  border-radius: 14px;
+  padding: 14px 20px;
+  display: inline-block;
+}
+.price-pill-tag.dark-tag {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(158,240,26,0.3);
+}
+
+/* Comparison Table */
+.comparison-table-wrapper {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.comparison-table {
+  width: 100%;
+  margin-bottom: 0;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.comparison-table th {
+  background: var(--bg-dark-forest);
+  color: #FFFFFF;
+  padding: 18px 20px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border: none;
+}
+.comparison-table th.highlight-col {
+  background: #08261e;
+  color: var(--brand-lime-bright);
+}
+.comparison-table td {
+  padding: 16px 20px;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+.comparison-table tr:nth-child(even) {
+  background-color: var(--bg-cream);
+}
+.comparison-table td.highlight-col {
+  background-color: rgba(158,240,26,0.06);
+  font-weight: 600;
+}
+
+/* Guarantee Card */
+.guarantee-card {
+  background: #FFFFFF;
+  border: 1px solid var(--border-light);
+  border-radius: 20px;
+  padding: 28px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  height: 100%;
+}
+.guarantee-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(132,204,22,0.4);
+  box-shadow: var(--shadow-md);
+}
+.guarantee-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(158,240,26,0.15);
+  color: var(--bg-dark-forest);
+  font-size: 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
