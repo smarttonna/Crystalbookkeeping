@@ -13,6 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialize Appointment Modal logic
   initBookingModal();
 
+  // Initialize Contact Page Message Form
+  initContactPageForm();
+
   // Smooth Scrolling
   initSmoothScroll();
 });
@@ -190,6 +193,39 @@ function initBookingModal() {
       alert('Thank you! Your request has been formatted and forwarded to WhatsApp. You can also email us directly at Crystalbooksconsult@gmail.com.');
     });
   }
+}
+
+/* ==========================================================================
+   Contact Page Direct Message Form Handler
+   ========================================================================== */
+function initContactPageForm() {
+  const form = document.getElementById('contactPageForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('contactName')?.value.trim() || '';
+    const email = document.getElementById('contactEmail')?.value.trim() || '';
+    const phone = document.getElementById('contactPhone')?.value.trim() || '';
+    const software = document.getElementById('contactSoftware')?.value || 'Not Specified';
+    const service = document.getElementById('contactService')?.value || 'General Inquiry';
+    const message = document.getElementById('contactMessage')?.value.trim() || '';
+
+    // Format email message
+    const subject = encodeURIComponent(`Inquiry from ${name} - Crystal Bookkeeping`);
+    const bodyText = `Hi Wuraola,\n\nI am reaching out via Crystal Bookkeeping's website.\n\n` +
+      `Name: ${name}\n` +
+      `Email: ${email}\n` +
+      `Phone: ${phone}\n` +
+      `Software: ${software}\n` +
+      `Primary Need: ${service}\n\n` +
+      `Message:\n${message || 'Looking forward to discussing our bookkeeping needs.'}`;
+
+    const mailtoUrl = `mailto:Crystalbooksconsult@gmail.com?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
+
+    window.location.href = mailtoUrl;
+  });
 }
 
 /* ==========================================================================

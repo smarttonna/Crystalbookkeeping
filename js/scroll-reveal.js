@@ -30,6 +30,7 @@
   /** Mark element for reveal animation */
   function mark(el, type, delayMs, speed) {
     if (!el || el.classList.contains('sr-hidden') || aboveFold(el)) return null;
+    if (el.closest('.tab-pane') || el.closest('.accordion') || el.closest('.modal')) return null;
     el.classList.add('sr-hidden', type);
     if (speed)   el.classList.add('sr-' + speed);   // 'fast' | 'slow'
     if (delayMs) el.style.transitionDelay = delayMs + 'ms';
@@ -55,7 +56,7 @@
        2.  HEADINGS (section context, not navbar/footer brand)
     ────────────────────────────────────────────────────────── */
     document.querySelectorAll(
-      'main h2, main .h2, section h2, section .h2, ' +
+      'main h2:not(.accordion-header), main .h2, section h2:not(.accordion-header), section .h2, ' +
       'section h3, section .h3, section h4, section .h4'
     ).forEach(el => add(el, T.FLIP, 60));
 
