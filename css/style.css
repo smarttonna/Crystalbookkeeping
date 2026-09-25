@@ -103,10 +103,6 @@ body.preloader-active { overflow: hidden; }
   40%           { transform: scale(1.15); opacity: 1; }
 }
 
-.preloader-sound-hint {
-  position: absolute; bottom: 24px; right: 24px; background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(158, 240, 26, 0.3); color: var(--brand-lime-bright); padding: 6px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.2s ease; z-index: 100;
-}
-.preloader-sound-hint:hover { background: rgba(158, 240, 26, 0.2); transform: scale(1.04); }
 
 #crystalPreloader.preloader--fade-out { animation: preloaderFadeOut 0.6s ease forwards; }
 @keyframes preloaderFadeOut {
@@ -399,13 +395,6 @@ body.preloader-active {
   40%           { transform: scale(1.15); opacity: 1; }
 }
 
-.preloader-sound-hint {
-  position: absolute; bottom: 24px; right: 24px;
-  background: rgba(5, 150, 105, 0.08); border: 1px solid rgba(5, 150, 105, 0.3);
-  color: #059669; padding: 6px 14px; border-radius: 20px; font-size: 0.78rem; font-weight: 600;
-  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; transition: all 0.2s ease; z-index: 100;
-}
-.preloader-sound-hint:hover { background: rgba(5, 150, 105, 0.18); transform: scale(1.04); }
 
 #crystalPreloader.preloader--fade-out { animation: preloaderFadeOut 0.6s ease forwards; }
 @keyframes preloaderFadeOut {
